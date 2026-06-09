@@ -1,0 +1,9 @@
+package com.example.payment.service;
+
+import java.math.BigDecimal;
+
+public interface FeePolicyService {
+    BigDecimal calculateFee(
+            BigDecimal amountRub
+    );
+}

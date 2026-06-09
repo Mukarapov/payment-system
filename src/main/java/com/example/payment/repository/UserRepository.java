@@ -1,6 +1,6 @@
-package repository;
+package com.example.payment.repository;
 
-import model.User;
+import com.example.payment.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

@@ -1,6 +1,6 @@
-package model;
+package com.example.payment.model;
 
-import enums.Currency;
+import com.example.payment.enums.Currency;
 import jakarta.persistence.*;
 import lombok.*;
 

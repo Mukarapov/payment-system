@@ -26,3 +26,22 @@ create table payments
         foreign key (recipient_id)
             references users(id)
 );
+
+create table fees
+(
+    id bigint generated always as identity primary key,
+
+    value numeric(19,2) not null,
+
+    user_id bigint not null,
+
+    payment_id bigint not null unique,
+
+    constraint fk_fee_user
+        foreign key (user_id)
+            references users(id),
+
+    constraint fk_fee_payment
+        foreign key (payment_id)
+            references payments(id)
+);

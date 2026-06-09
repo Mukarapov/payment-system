@@ -3,22 +3,28 @@ spring:
     name: payment-system
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/payments
+    url: jdbc:postgresql://localhost:5433/payments
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
 
-    jpa:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+
+    properties:
       hibernate:
-        ddl-auto: validate
+        format_sql: true
 
-      show-sql: true
+  flyway:
+    enabled: true
 
-      properties:
-        hibernate:
-          format_sql: true
+server:
+  port: 8080
 
-    flyway:
-      enabled: true
-
-  server:
-    port: 8080
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.flywaydb: info

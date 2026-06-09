@@ -1,6 +1,6 @@
-package dto;
+package com.example.payment.dto;
 
-import enums.Currency;
+import com.example.payment.enums.Currency;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

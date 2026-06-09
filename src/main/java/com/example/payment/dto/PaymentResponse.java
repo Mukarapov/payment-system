@@ -1,4 +1,4 @@
-package dto;
+package com.example.payment.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,5 +12,5 @@ import java.math.BigDecimal;
 public class PaymentResponse {
     private Long paymentId;
     private BigDecimal amountRub;
-    private Long fee;
+    private BigDecimal fee;
 }
